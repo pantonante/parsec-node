@@ -28,7 +28,7 @@ npm install
 It might require python 2.7.
 
 ## Usage
-Before please update your `config.json` file with your PubNub keys.
+Before running the server, please update your `config.json` file with your PubNub keys.
 
 To run the server:
 ```sh
@@ -46,7 +46,7 @@ To see examples on several accessory please refer to [HAP-NodeJS accessory examp
 
 ### RESTful API
 
-Publish a message to a channel you can use the RESTful API. For example to publish to the "roomlight" channel you can run:
+To publish a message to a channel you can use the RESTful API. For example to publish to the "roomlight" channel you can run:
 ```sh
 curl -X POST -H "Contentype: application/json" -d '{state:"ON"}' http://localhost:8091/channel/roomlight
 ```
