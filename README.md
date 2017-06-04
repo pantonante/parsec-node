@@ -3,20 +3,20 @@ Parsec
 Smart Home Server based on PubNub with HomeKit integration. It serves static webpages for web control.
 
 ## TOC
-- [Features](#Features)
-- [Installation](#Installation)
-- [Usage](#Usage)
-	-[Accessory](#Accesory)
-	-[RESTful API](RESTful-API)
-	-[RESTful API client](#RESTful-API-client)
-	-[Static Web Pages](#Static-Web-Pages)
+* [Features](#features)
+* [Installation](#installation)
+ * [Usage](#usage)
+   * [Accessory](#accessory)
+   * [RESTful API](#restful-api)
+      * [RESTful API client](#restful-api-client)
+   * [Static Web Pages](#static-web-pages)
 
 ## Features
 
 - Writtend in Node.js
 - Uses PubNub as message broker
 - Integrated with HomeKit Protocol
-- Servers Static webpages for web control
+- Servers Static web pages for web control
 - Offers RESTul API
 - Works on everyting supporting Node.js, e.g. RaspberryPi, Intel Edison etc.
 
