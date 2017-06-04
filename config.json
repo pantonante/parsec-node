@@ -1,0 +1,21 @@
+{
+	"broker": {
+		"subscribeKey": "sub-x-xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+		"publishKey": "pub-x-xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+		"secretKey": "sec-c-xxxxxxxxxxxxzxxxxxxxxxxxxxxxxxxxxxxxx",
+		"ssl": true
+	},
+	"rest": {
+		"port": 8091
+	},
+	"webserver":{
+		"htdocsFolder": "http",
+		"httpdPort": 8080
+	},
+	"homekit":{
+		"name": "Parsec HomeKit",
+		"accessoryFolder": "accessories",
+		"pin": "308-56-775"
+	},
+	"printDebug": true
+}

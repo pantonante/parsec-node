@@ -1,0 +1,30 @@
+{
+  "name": "parsec",
+  "version": "1.0.0",
+  "description": "Home Ecosystem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pasquale Antonante",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "buffer-shims": "^1.0.0",
+    "config.json": "0.0.4",
+    "connect": "^3.6.1",
+    "curve25519-n2": "^1.1.2",
+    "debug": "^2.2.0",
+    "ed25519": "^0.0.4",
+    "events": "^1.1.1",
+    "fast-srp-hap": "^1.0.1",
+    "ip": "^1.1.3",
+    "mdns": "^2.3.3",
+    "node-persist": "^0.0.11",
+    "node-rest-client": "^3.1.0",
+    "pubnub": "^4.8.0",
+    "request": "^2.81.0",
+    "serve-static": "^1.12.1",
+    "util": "^0.10.3"
+  }
+}

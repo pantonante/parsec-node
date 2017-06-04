@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parsec WebUI</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="./assets/css/vendor.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/flat-admin.css">
+
+  <!-- Theme -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/theme/blue-sky.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/theme/blue.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/theme/red.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/theme/yellow.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/toggles.css">
+
+</head>
+<body>
+  <div class="app app-default">
+
+<aside class="app-sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-brand" href="#"><span class="highlight">PARSEC</span> WebUI</a>
+    <button type="button" class="sidebar-toggle">
+      <i class="fa fa-times"></i>
+    </button>
+  </div>
+  <div class="sidebar-menu">
+    <ul class="sidebar-nav">
+      <li class="active">
+        <a href="./index.html">
+          <div class="icon">
+            <i class="fa fa-tasks" aria-hidden="true"></i>
+          </div>
+          <div class="title">Dashboard</div>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="sidebar-footer">
+    <ul class="menu">
+      <li>
+        <a href="/" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fa fa-cogs" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li><a href="#"><span class="flag-icon flag-icon-th flag-icon-squared"></span></a></li>
+    </ul>
+  </div>
+</aside>
+
+<script type="text/ng-template" id="sidebar-dropdown.tpl.html">
+  <div class="dropdown-background">
+    <div class="bg"></div>
+  </div>
+  <div class="dropdown-container">
+    {{list}}
+  </div>
+</script>
+<div class="app-container">
+
+  <nav class="navbar navbar-default" id="navbar">
+  <div class="container-fluid">
+    <div class="navbar-collapse collapse in">
+      <ul class="nav navbar-nav navbar-mobile">
+        <li>
+          <button type="button" class="sidebar-toggle">
+            <i class="fa fa-bars"></i>
+          </button>
+        </li>
+        <li class="logo">
+          <a class="navbar-brand" href="#"><span class="highlight">Flat v3</span> Admin</a>
+        </li>
+        <li>
+          <button type="button" class="navbar-toggle">
+            <img class="profile-img" src="./assets/images/profile.png">
+          </button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-left">
+        <li class="navbar-title">Dashboard</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Start BODY -->
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="card card-mini">
+      <div class="card-header">
+        <div class="card-title">Room Light</div>
+        <ul class="card-action">
+          <li>
+            <a href="/">
+              <i class="fa fa-refresh"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body no-padding table-responsive">
+        <!-- <div class="toggle toggle--daynight" id="roomlight">
+        <input type="checkbox" id="toggle--daynight" class="toggle--checkbox">
+        <label class="toggle--btn" for="toggle--daynight"><span class="toggle--feature"></span></label>
+        </div> -->
+      <div class="toggle toggle--text" id="roomlight">
+        <input type="checkbox" id="toggle--text" class="toggle--checkbox">
+        <label class="toggle--btn" for="toggle--text" data-label-on="on"  data-label-off="off"></label>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="card card-tab card-mini">
+      <div class="card-header">
+        <ul class="nav nav-tabs tab-stats">
+          <li role="tab1" class="active">
+            <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Browsers</a>
+          </li>
+          <li role="tab2">
+            <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">OS</a>
+          </li>
+          <li role="tab2">
+            <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">More</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body tab-content">
+        <div role="tabpanel" class="tab-pane active" id="tab1">
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="chart ct-chart-browser ct-perfect-fourth"></div>
+            </div>
+            <div class="col-sm-4">
+              <ul class="chart-label">
+                <li class="ct-label ct-series-a">Google Chrome</li>
+                <li class="ct-label ct-series-b">Firefox</li>
+                <li class="ct-label ct-series-c">Safari</li>
+                <li class="ct-label ct-series-d">IE</li>
+                <li class="ct-label ct-series-e">Opera</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab2">
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="chart ct-chart-os ct-perfect-fourth"></div>
+            </div>
+            <div class="col-sm-4">
+              <ul class="chart-label">
+                <li class="ct-label ct-series-a">iOS</li>
+                <li class="ct-label ct-series-b">Android</li>
+                <li class="ct-label ct-series-c">Windows</li>
+                <li class="ct-label ct-series-d">OSX</li>
+                <li class="ct-label ct-series-e">Linux</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab3">
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+
+<!-- Footer -->
+  <footer class="app-footer"> 
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="footer-copyright">
+        PARSEC - Home Ecosystem
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+  </div>
+  
+  <script type="text/javascript" src="./assets/js/vendor.js"></script>
+  <script type="text/javascript" src="./assets/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src="http://cdn.pubnub.com/pubnub-3.16.5.min.js"></script>
+  <script src="./assets/js/parsec.js"></script>
+
+
+</body>
+</html>
